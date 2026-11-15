@@ -1,0 +1,18 @@
+# One-click deploy on Render (free plan). Render → New → Blueprint → pick this repo.
+# Free instances have no persistent disk: with PGlite the demo data resets on each restart.
+# For data that survives, create a free Neon Postgres and paste its URL into DATABASE_URL.
+services:
+  - type: web
+    name: teamboard
+    runtime: node
+    plan: free
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false
