@@ -2,13 +2,13 @@
 
 A multi-tenant project management and team collaboration app. Organisations, workspaces, teams, projects, milestones, a drag-and-drop Kanban board, subtasks, comments, file attachments, activity history, in-app and email notifications, overdue alerts, role-based access, and productivity reports with their formulas shown on screen.
 
-Built for **Project 2: Project Management & Team Collaboration SaaS** (Web Development Internship).
+Built for Project 2: Project Management & Team Collaboration SaaS (Web Development Internship).
 
 ---
 
 ## Run it (2 commands)
 
-You only need **Node.js 20 or newer**. No database to install, no Docker, no `.env` file.
+You only need Node.js 20 or newer. No database to install, no Docker, no `.env` file.
 
 ```bash
 npm install
@@ -120,17 +120,6 @@ Each test file starts a fresh in-memory PostgreSQL, so tests never touch your de
 
 ---
 
-## Deploy (free)
-
-**Render** (one service hosts the API and the website):
-
-1. Push this repo to GitHub.
-2. On Render: **New → Blueprint** and pick the repo. `render.yaml` configures everything and generates `JWT_SECRET`.
-3. Optional but recommended: create a free database at neon.tech and paste its connection string into `DATABASE_URL`. Without it, the app uses PGlite and the demo data resets whenever Render restarts the free instance.
-
-Any host that runs `npm run build` then `npm start` works the same way.
-
----
 
 ## Configuration
 
